@@ -1,0 +1,19 @@
+<section>
+    <div class="container">
+     <div class="row">
+       
+     <div class="col-md-3" *ngFor="let item of items; let i = index">
+       <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="assets/image/{{item.image}}" alt="Card image cap">
+      <div class="card-body">
+        <h2 class="card-title">{{item.productname}}</h2>
+        <p class="card-text">{{item.diccription}}</p>
+        <a href="#"  (click)="addtocart(item)" class="btn btn-primary">Add TO Cart</a>
+        
+      </div>
+    </div>
+  </div>
+     
+     </div>
+    </div>
+  </section>

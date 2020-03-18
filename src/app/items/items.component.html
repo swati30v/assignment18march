@@ -1,0 +1,28 @@
+<app-homepage></app-homepage>
+<section>
+  
+  <div class="container">
+   <div class="row">
+     
+   <div class="col-md-3" *ngFor="let item of items; let i = index">
+        <P>{{i}}</P>   <!--  index value top pr show krne ke liye -->
+     <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="assets/image/{{item.image}}" alt="Card image cap">
+    <div class="card-body">
+      <h2 class="card-title">{{item.productname}}</h2>
+      <p class="card-text">{{item.diccription}}</p>
+      <!-- <a href="#"  (click)="addtocart(item)" class="btn btn-primary">Add TO Cart</a> -->
+      <button (click)="addItem(item,i)">+</button>
+      <p class="card-text">{{item.qty}}</p>
+      
+      <button class="btn2" (click)="removeItem(item,i)">-</button>
+      
+    </div>
+  </div>
+</div>
+   
+   </div>
+  </div>
+</section>
+<button class="btn" style="color: blueviolet;"  (click)="clearItem(item,i)" >Clear All</button>
+<!-- <div>TotalPrice{{item.Price}}</div> -->

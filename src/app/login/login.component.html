@@ -1,0 +1,27 @@
+<nav class="navbar navbar-inverse" *ngIf="!isUserLoggedIn">
+    <div class="container-fluid">
+      
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a >Page 1</a></li>
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a [routerLink] = "['/Dashboard']"><span class="glyphicon glyphicon-user"></span> Dashboard</a></li>
+        <li><a [routerLink] = "['/Product']"><span class="glyphicon glyphicon-log-in"></span> Product</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- form started -->
+  <div class="login-page">
+    <div class="form">
+     
+      <form  class="login-form">
+        <input type="text" placeholder="username" formControlName="username"/>
+        <input type="password"  placeholder="password" formControlName="password"/>
+        <button type="submit"   (click)="onLoginClick()">login</button>
+        <p class="message">Not registered? <a href="#">Create an account</a></p>
+      </form>
+    </div>
+  </div>
